@@ -3,7 +3,6 @@ Neobytes Library
 
 [![NPM Package](https://img.shields.io/npm/v/neobytes-lib.svg?style=flat-square)](https://www.npmjs.org/package/neobytes-lib)
 [![Build Status](https://img.shields.io/travis/neobytes-project/neobytes-lib.svg?branch=master&style=flat-square)](https://travis-ci.org/neobytes-project/neobytes-lib)
-[![Coverage Status](https://img.shields.io/coveralls/neobytes-project/neobytes-lib.svg?style=flat-square)](https://coveralls.io/github/neobytes-project/neobytes-lib?branch=master)
 
 A pure and powerful JavaScript Neobytes library.
 

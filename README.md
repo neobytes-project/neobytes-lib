@@ -47,8 +47,6 @@ To get community assistance and ask for help with implementation questions, plea
 
 We're using Bitcore in production, as are [many others](http://bitcore.io#projects), but please use common sense when doing anything related to finances! We take no responsibility for your implementation decisions.
 
-If you find a security issue, please email security@bitpay.com.
-
 ## Contributing
 
 Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/neobytes-project/neobytes-lib/blob/master/CONTRIBUTING.md) file.
@@ -62,15 +60,6 @@ gulp browser
 ```
 
 This will generate files named `neobytes-lib.js` and `neobytes-lib.min.js`.
-
-You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/neobytes-project/neobytes-lib/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
-
-To verify signatures, use the following PGP keys:
-- @braydonf: https://pgp.mit.edu/pks/lookup?op=get&search=0x9BBF07CAC07A276D `D909 EFE6 70B5 F6CC 89A3 607A 9BBF 07CA C07A 276D`
-- @gabegattis: https://pgp.mit.edu/pks/lookup?op=get&search=0x441430987182732C `F3EA 8E28 29B4 EC93 88CB  B0AA 4414 3098 7182 732C`
-- @kleetus: https://pgp.mit.edu/pks/lookup?op=get&search=0x33195D27EF6BDB7F `F8B0 891C C459 C197 65C2 5043 3319 5D27 EF6B DB7F`
-- @matiu: https://pgp.mit.edu/pks/lookup?op=get&search=0x9EDE6DE4DE531FAC `25CE ED88 A1B1 0CD1 12CD  4121 9EDE 6DE4 DE53 1FAC`
-
 
 ## Development & Tests
 

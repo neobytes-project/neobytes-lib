@@ -5043,18 +5043,15 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x4c,
-  privatekey: 0xcc,
-  scripthash: 0x10,
+  pubkeyhash: 0x35,
+  privatekey: 0xb5,
+  scripthash: 0x15,
   xpubkey: 0x488b21e,    // 'xpub' (Bitcoin Default)
   xprivkey: 0x488ade4,   // 'xprv' (Bitcoin Default)
-  networkMagic: 0xbf0c6bbd,
-  port: 9999,
+  networkMagic: 0x456c6c61,
+  port: 1428,
   dnsSeeds: [
-    'dnsseed.darkcoin.io',
-    'dnsseed.dashdot.io',
-    'dnsseed.masternode.io',
-    'dnsseed.dashpay.io'
+    'seed.neobytes.io'
   ]
 });
 
@@ -5067,9 +5064,9 @@ var livenet = get('livenet');
 addNetwork({
   name: 'testnet',
   alias: 'regtest',
-  pubkeyhash: 0x8c,
-  privatekey: 0xef,
-  scripthash: 0x13,
+  pubkeyhash: 0x70,
+  privatekey: 0xf0,
+  scripthash: 0x12,
   xpubkey: 0x43587cf,     // 'tpub' (Bitcoin Default)
   xprivkey: 0x04358394    // 'tprv' (Bitcoin Default)
 });
@@ -5083,12 +5080,10 @@ var testnet = get('testnet');
 // Add configurable values for testnet/regtest
 
 var TESTNET = {
-  PORT: 19999,
-  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xcee2caff),
+  PORT: 11428,
+  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0x536e6f77),
   DNS_SEEDS: [
-    'testnet-seed.darkcoin.io',
-    'testnet-seed.dashdot.io',
-    'test.dnsseed.masternode.io'
+    'testnet-seed.neobytes.io'
   ]
 };
 
@@ -5099,8 +5094,8 @@ for (var key in TESTNET) {
 }
 
 var REGTEST = {
-  PORT: 19994,
-  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xfcc1b7dc),
+  PORT: 11444,
+  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0x4c756e61),
   DNS_SEEDS: []
 };
 
@@ -66458,9 +66453,9 @@ function block(c, tweak, b, off) {
 }
 },{"./helper":268,"./op":272}],276:[function(require,module,exports){
 module.exports={
-  "name": "bitcore-lib-dash",
+  "name": "neobytes-lib",
   "version": "0.15.2",
-  "description": "A pure and powerful JavaScript Dash library.",
+  "description": "A pure and powerful JavaScript Neobytes library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -66525,10 +66520,13 @@ module.exports={
     {
       "name": "Alex Werner",
       "email": "alex@werner.fr"
-    }
-  ],
+    },
+    {
+      "name": "SikkieNL",
+      "email": "sikkienl@outlook.com"
+    }  ],
   "keywords": [
-    "dash",
+    "neobytes",
     "transaction",
     "address",
     "p2p",
@@ -66545,12 +66543,12 @@ module.exports={
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/bitcore-lib-dash.git"
+    "url": "https://github.com/neobytes-project/neobytes-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-lib-dash/issues"
+    "url": "https://github.com/neobytes-project/neobytes-lib/issues"
   },
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/neobytes-project/neobytes-lib",
   "browser": {
     "request": "browser-request"
   },
@@ -66565,7 +66563,7 @@ module.exports={
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-dash": "dashevo/bitcore-build-dash",
+    "neobytes-build": "neobytes-build",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
@@ -66575,7 +66573,7 @@ module.exports={
   "license": "MIT"
 }
 
-},{}],"bitcore-lib-dash":[function(require,module,exports){
+},{}],"neobytes-lib":[function(require,module,exports){
 (function (global,Buffer){
 'use strict';
 

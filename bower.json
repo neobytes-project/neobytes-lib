@@ -1,8 +1,8 @@
 {
-  "name": "neobytescore-lib",
-  "main": "./neobytescore-lib.min.js",
+  "name": "neobytes-lib",
+  "main": "./neobytes-lib.min.js",
   "version": "0.15.3",
-  "homepage": "https://github.com/neobytes-project/neobytescore-lib",
+  "homepage": "https://github.com/neobytes-project/neobytes-lib",
   "authors": [
     "Neobytes", "BitPay, Inc."
   ],

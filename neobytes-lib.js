@@ -26098,7 +26098,7 @@ module.exports={
   "_args": [
     [
       "elliptic@6.4.0",
-      "/home/sikkienl/dev/neobytescore-lib"
+      "/home/sikkienl/dev/neobytes-lib"
     ]
   ],
   "_development": true,
@@ -26123,7 +26123,7 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_spec": "6.4.0",
-  "_where": "/home/sikkienl/dev/neobytescore-lib",
+  "_where": "/home/sikkienl/dev/neobytes-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -28467,7 +28467,7 @@ module.exports={
   "_args": [
     [
       "elliptic@6.4.0",
-      "/home/sikkienl/dev/neobytescore-lib"
+      "/home/sikkienl/dev/neobytes-lib"
     ]
   ],
   "_development": true,
@@ -28492,7 +28492,7 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_spec": "6.4.0",
-  "_where": "/home/sikkienl/dev/neobytescore-lib",
+  "_where": "/home/sikkienl/dev/neobytes-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -32633,7 +32633,7 @@ module.exports={
   "_args": [
     [
       "elliptic@3.0.3",
-      "/home/sikkienl/dev/neobytescore-lib"
+      "/home/sikkienl/dev/neobytes-lib"
     ]
   ],
   "_from": "elliptic@3.0.3",
@@ -32657,7 +32657,7 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_spec": "3.0.3",
-  "_where": "/home/sikkienl/dev/neobytescore-lib",
+  "_where": "/home/sikkienl/dev/neobytes-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -66625,7 +66625,7 @@ function block(c, tweak, b, off) {
 }
 },{"./helper":269,"./op":273}],277:[function(require,module,exports){
 module.exports={
-  "name": "neobytescore-lib",
+  "name": "neobytes-lib",
   "version": "0.15.3",
   "description": "A pure and powerful JavaScript Neobytes library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -66715,12 +66715,12 @@ module.exports={
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/neobytes-project/neobytescore-lib.git"
+    "url": "https://github.com/neobytes-project/neobytes-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/neobytes-project/neobytescore-lib/issues"
+    "url": "https://github.com/neobytes-project/neobytes-lib/issues"
   },
-  "homepage": "https://github.com/neobytes-project/neobytescore-lib",
+  "homepage": "https://github.com/neobytes-project/neobytes-lib",
   "browser": {
     "request": "browser-request"
   },

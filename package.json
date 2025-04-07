@@ -1,5 +1,5 @@
 {
-  "name": "@neobytes/neobytescore-lib",
+  "name": "@neobytes/neobytes-lib",
   "version": "0.15.3",
   "description": "A pure and powerful JavaScript Neobytes library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -91,12 +91,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/neobytes-project/neobytescore-lib.git"
+    "url": "https://github.com/neobytes-project/neobytes-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/neobytes-project/neobytescore-lib/issues"
+    "url": "https://github.com/neobytes-project/neobytes-lib/issues"
   },
-  "homepage": "https://github.com/neobytes-project/neobytescore-lib",
+  "homepage": "https://github.com/neobytes-project/neobytes-lib",
   "browser": {
     "request": "browser-request"
   },

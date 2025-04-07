@@ -1,5 +1,5 @@
-Neobytescore Library
-=======
+Neobytes Library
+================
 
 [![NPM Package](https://img.shields.io/npm/v/neobytes-lib.svg?style=flat-square)](https://www.npmjs.org/package/neobytes-lib)
 

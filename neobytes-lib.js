@@ -66735,7 +66735,7 @@ module.exports={
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "neobytescore-build": "neobytes-project/neobytescore-build",
+    "neobytes-build": "neobytes-project/neobytes-build",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",

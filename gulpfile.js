@@ -1,5 +1,5 @@
 
 
-var bitcoreTasks = require('neobytescore-build');
+var bitcoreTasks = require('neobytes-build');
 
 bitcoreTasks('lib');

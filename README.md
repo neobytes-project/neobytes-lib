@@ -1,7 +1,7 @@
 Neobytes Library
 ================
 
-[![NPM Package](https://img.shields.io/npm/v/neobytes-lib.svg?style=flat-square)](https://www.npmjs.org/package/neobytes-lib)
+[![NPM Package](https://img.shields.io/npm/v/neobytes-lib.svg?style=flat-square)](https://www.npmjs.org/package/@neobytes/neobytes-lib)
 
 A pure and powerful JavaScript Neobytes library.
 

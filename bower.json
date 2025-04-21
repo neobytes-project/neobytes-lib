@@ -1,17 +1,17 @@
 {
-  "name": "bitcore-lib-dash",
-  "main": "./bitcore-lib-dash.min.js",
+  "name": "neobytescore-lib",
+  "main": "./neobytescore-lib.min.js",
   "version": "0.15.3",
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/neobytes-project/neobytescore",
   "authors": [
-    "Dash", "BitPay, Inc."
+    "Neobytes", "BitPay, Inc."
   ],
-  "description": "A pure, powerful core for your dash project.",
+  "description": "A pure, powerful core for your neobytes project.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "dash",
+    "neobytes",
     "bitcoin",
     "bitcore",
     "btc",

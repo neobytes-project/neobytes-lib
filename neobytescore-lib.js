@@ -3493,7 +3493,7 @@ GovObject.prototype.fromString = function(string) {
 };
 
 /**
- * Retrieve a hexa string that can be used with dashd's CLI interface
+ * Retrieve a hexa string that can be used with neobytesd's CLI interface
  *
  * @param {Object} opts allows to skip certain tests. {@see Transaction#serialize}
  * @return {string}
@@ -3621,7 +3621,7 @@ Proposal.prototype.dataHex = function() {
         url: this.url
     };
 
-    // screwy data shims 'til we can fix this on dashd
+    // screwy data shims 'til we can fix this on neobytesd
     var inner = ['proposal', _govObj];
     var outer = [inner];
 
@@ -5215,18 +5215,15 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x4c,
-  privatekey: 0xcc,
-  scripthash: 0x10,
+  pubkeyhash: 0x35,
+  privatekey: 0xb5,
+  scripthash: 0x15,
   xpubkey: 0x488b21e,    // 'xpub' (Bitcoin Default)
   xprivkey: 0x488ade4,   // 'xprv' (Bitcoin Default)
-  networkMagic: 0xbf0c6bbd,
-  port: 9999,
+  networkMagic: 0x456c6c61,
+  port: 1428,
   dnsSeeds: [
-    'dnsseed.darkcoin.io',
-    'dnsseed.dashdot.io',
-    'dnsseed.masternode.io',
-    'dnsseed.dashpay.io'
+    'seed.neobytes.io'
   ]
 });
 
@@ -5239,9 +5236,9 @@ var livenet = get('livenet');
 addNetwork({
   name: 'testnet',
   alias: 'regtest',
-  pubkeyhash: 0x8c,
-  privatekey: 0xef,
-  scripthash: 0x13,
+  pubkeyhash: 0x70,
+  privatekey: 0xf0,
+  scripthash: 0x12,
   xpubkey: 0x43587cf,     // 'tpub' (Bitcoin Default)
   xprivkey: 0x04358394    // 'tprv' (Bitcoin Default)
 });
@@ -5255,12 +5252,10 @@ var testnet = get('testnet');
 // Add configurable values for testnet/regtest
 
 var TESTNET = {
-  PORT: 19999,
-  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xcee2caff),
+  PORT: 11428,
+  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0x536e6f77),
   DNS_SEEDS: [
-    'testnet-seed.darkcoin.io',
-    'testnet-seed.dashdot.io',
-    'test.dnsseed.masternode.io'
+    'testnet-seed.neobytes.io'
   ]
 };
 
@@ -5271,8 +5266,8 @@ for (var key in TESTNET) {
 }
 
 var REGTEST = {
-  PORT: 19994,
-  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xfcc1b7dc),
+  PORT: 11444,
+  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0x4c756e61),
   DNS_SEEDS: []
 };
 
@@ -11552,7 +11547,7 @@ var Unit = require('./unit');
  * @example
  * ```javascript
  *
- * var uri = new URI('dash:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6?amount=1.2');
+ * var uri = new URI('neobytes:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6?amount=1.2');
  * console.log(uri.address, uri.amount);
  * ```
  *
@@ -11615,7 +11610,7 @@ URI.fromObject = function fromObject(json) {
  * @example
  * ```javascript
  *
- * var valid = URI.isValid('dash:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6');
+ * var valid = URI.isValid('neobytes:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6');
  * // true
  * ```
  *
@@ -11642,8 +11637,8 @@ URI.isValid = function(arg, knownParams) {
 URI.parse = function(uri) {
   var info = URL.parse(uri, true);
 
-  if (info.protocol !== 'dash:') {
-    throw new TypeError('Invalid dash URI');
+  if (info.protocol !== 'neobytes:') {
+    throw new TypeError('Invalid neobytes URI');
   }
 
   // workaround to host insensitiveness
@@ -11667,7 +11662,7 @@ URI.prototype._fromObject = function(obj) {
   /* jshint maxcomplexity: 10 */
 
   if (!Address.isValid(obj.address)) {
-    throw new TypeError('Invalid dash address');
+    throw new TypeError('Invalid neobytes address');
   }
 
   this.address = new Address(obj.address);
@@ -11737,7 +11732,7 @@ URI.prototype.toString = function() {
   _.extend(query, this.extras);
 
   return URL.format({
-    protocol: 'dash:',
+    protocol: 'neobytes:',
     host: this.address,
     query: query
   });
@@ -26103,7 +26098,7 @@ module.exports={
   "_args": [
     [
       "elliptic@6.4.0",
-      "/home/pierre/dev/bitcore-lib-dash"
+      "/home/pierre/dev/neobytescore-lib"
     ]
   ],
   "_development": true,
@@ -26128,7 +26123,7 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_spec": "6.4.0",
-  "_where": "/home/pierre/dev/bitcore-lib-dash",
+  "_where": "/home/pierre/dev/neobytescore-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -28472,7 +28467,7 @@ module.exports={
   "_args": [
     [
       "elliptic@6.4.0",
-      "/home/pierre/dev/bitcore-lib-dash"
+      "/home/pierre/dev/neobytescore-lib"
     ]
   ],
   "_development": true,
@@ -28497,7 +28492,7 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_spec": "6.4.0",
-  "_where": "/home/pierre/dev/bitcore-lib-dash",
+  "_where": "/home/pierre/dev/neobytescore-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -32638,7 +32633,7 @@ module.exports={
   "_args": [
     [
       "elliptic@3.0.3",
-      "/home/pierre/dev/bitcore-lib-dash"
+      "/home/pierre/dev/neobytescore-lib"
     ]
   ],
   "_from": "elliptic@3.0.3",
@@ -32662,7 +32657,7 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_spec": "3.0.3",
-  "_where": "/home/pierre/dev/bitcore-lib-dash",
+  "_where": "/home/pierre/dev/neobytescore-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -36094,7 +36089,7 @@ module.exports = Array.isArray || function (arr) {
     var objectCtorString = funcToString.call(Object);
 
     /** Used to restore the original `_` reference in `_.noConflict`. */
-    var oldDash = root._;
+    var oldNeobytes = root._;
 
     /** Used to detect if a method is native. */
     var reIsNative = RegExp('^' +
@@ -50326,7 +50321,7 @@ module.exports = Array.isArray || function (arr) {
      */
     function noConflict() {
       if (root._ === this) {
-        root._ = oldDash;
+        root._ = oldNeobytes;
       }
       return this;
     }
@@ -60698,7 +60693,7 @@ module.exports.AES_ROUND_NOKEY_LE = function(X, Y) {
 ///////////////  Blake //////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -60924,7 +60919,7 @@ module.exports = function(input, format, output) {
 //////////////  BMW /////////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -61282,7 +61277,7 @@ module.exports = function(input, format, output) {
 ////////////  Cubehash //////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -61614,7 +61609,7 @@ module.exports = function(input, format, output) {
 ///////////////  Echo ///////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -61901,7 +61896,7 @@ module.exports = function(input, format, output) {
 ////////////  groestl ///////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -63323,7 +63318,7 @@ module.exports.string2Int32Buffer = function (s) {
 ///////////////  Jh /////////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -64324,7 +64319,7 @@ module.exports = methods;
 //////////////  Luffa ///////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -65244,7 +65239,7 @@ module.exports.xORTable = function(d, s1, s2, len) {
 ////////////  Shavite ///////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -65940,7 +65935,7 @@ module.exports = function(input, format, output) {
 //////////////  Simd ///////////////
 
 //// Written by Quantum Explorer ////
-////////// Dash Foundation //////////
+////////// Neobytes Foundation //////////
 /// Released under the MIT License //
 /////////////////////////////////////
 
@@ -66630,9 +66625,9 @@ function block(c, tweak, b, off) {
 }
 },{"./helper":269,"./op":273}],277:[function(require,module,exports){
 module.exports={
-  "name": "bitcore-lib-dash",
+  "name": "neobytescore-lib",
   "version": "0.15.3",
-  "description": "A pure and powerful JavaScript Dash library.",
+  "description": "A pure and powerful JavaScript Neobytes library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -66700,7 +66695,7 @@ module.exports={
     }
   ],
   "keywords": [
-    "dash",
+    "neobytes",
     "transaction",
     "address",
     "p2p",
@@ -66717,12 +66712,12 @@ module.exports={
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/bitcore-lib-dash.git"
+    "url": "https://github.com/neobytes-project/neobytescore-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-lib-dash/issues"
+    "url": "https://github.com/neobytes-project/neobytescore-lib/issues"
   },
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/neobytes-project/neobytescore-lib",
   "browser": {
     "request": "browser-request"
   },
@@ -66737,7 +66732,7 @@ module.exports={
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-dash": "dashevo/bitcore-build-dash",
+    "neobytescore-build": "neobytes-project/neobytescore-build",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",

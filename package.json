@@ -82,8 +82,7 @@
     "bip37",
     "bip69",
     "bip70",
-    "multisig",
-    "neobytescore"
+    "multisig"
   ],
   "repository": {
     "type": "git",
